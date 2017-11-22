@@ -1,6 +1,6 @@
 <template>
   <div class="foot-wrapper">
-    <input class="chat-input" type="text" name="" @keyup.enter="send(msg)" v-model="msg">
+    <input class="chat-input-line" type="text" name="" @keyup.enter="send(msg)" v-model="msg">
     <span class="chat-sub" :class="{'primary':!!msg}"  @click="send(msg)">发送</span>
   </div>
 </template>
@@ -17,10 +17,14 @@ export default {
   },
   methods: {
     send (msg) {
+      if (msg === '') {
+        return
+      }
       // CHAT.submit(msg)
       // this.msg=''
       // console.log(CHAT)
       this.$emit('sendMsg', msg)
+      this.msg = ''
     }
   }
 }
@@ -36,7 +40,7 @@ export default {
   padding: 5px 10px;
   justify-content: space-between;
   border-top: solid 1px rgba(0,0,0,0.1);
-  .chat-input{
+  .chat-input-line{
     height: 100%;
     width: 80%;
     border-radius: 10px;
@@ -56,7 +60,8 @@ export default {
     outline: none;
   }
   .primary{
-    background-color: #3CAF36;
+    background-color: #1E90FF;
+    color: white;
   }
 }
 </style>

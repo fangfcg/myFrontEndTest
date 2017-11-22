@@ -1,6 +1,6 @@
 <template>
 <div class="self-wrap">
-  <span class="-header" :style="{'background-color':color}">我</span>
+  <img class="-header" width="35" height="35" src="src/assets/1.jpg" alt="nopic"/>
   <!-- <span class="-name">超级厉害</span> -->
   <div class="-msg">{{msg}}</div>
 </div>
@@ -16,7 +16,7 @@ export default {
       // its initial state.
     }
   },
-  ready () {
+  mounted () {
     this.$el.scrollIntoView()
   },
   props: ['msg', 'color']
@@ -28,6 +28,7 @@ export default {
   padding: 5px 5px 15px 5px;
   position: relative;
   overflow: hidden;
+  /*
   .-header{
   	position: relative;
   	left: ~'calc(100% - 50px)';
@@ -39,6 +40,14 @@ export default {
     width: 50px;
     border-radius: 50%;
     font-weight: bolder;
+  }
+  */
+  .-header{
+    position: relative;
+  	left: ~'calc(100% - 50px)';
+    border-radius: 3px;
+    height:35px;
+    width: 35px;
   }
  /* .-name{
     background-color: #fff;
@@ -57,7 +66,7 @@ export default {
     top: 0px;
     border-radius: 6px;
     //max-width: ~'calc(100% - 180px)';
-    font-size: 16px;
+    font-size: 13px;
     width: fit-content;
     width:-webkit-fit-content;
     width:-moz-fit-content;

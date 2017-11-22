@@ -1,6 +1,6 @@
 <template>
 <div class="other-wrap">
-  <span class="-header" :style="{'background-color':color}">{{name}}</span>
+  <img class="-header" width="35" height="35" src="src/assets/2.png" alt="nopic"/>
   <div class="-msg">{{msg}}</div>
 </div>
 </template>
@@ -15,7 +15,7 @@ export default {
       // its initial state.
     }
   },
-  ready () {
+  mounted () {
     this.$el.scrollIntoView()
   },
   props: ['msg', 'name', 'color']
@@ -28,14 +28,10 @@ export default {
   padding: 5px 5px 0 5px;
   position: relative;
   .-header{
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
-    background-color: #905;
-    height:50px;
-    width: 50px;
-    border-radius: 50%;
-    font-weight: bolder;
+    border-radius: 3px;
+    height:35px;
+    width: 35px;
   }
   .-name{
     /*background-color: #fff;*/
@@ -50,11 +46,11 @@ export default {
     background-color: #fff;
     padding: 10px;
     position: relative;
-    left: 60px;
+    left: 40px;
     top: -40px;
     border-radius: 6px;
     //max-width: ~'calc(100% - 180px)';
-    font-size: 16px;
+    font-size: 13px;
     width: fit-content;
     width:-webkit-fit-content;
     width:-moz-fit-content;

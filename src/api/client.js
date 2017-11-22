@@ -7,7 +7,7 @@ var msgContent = ['fcg为您服务', 'hello', '1', '2', 'hello']
 
 var Chat = {
   msgList: [],
-  userName: null,
+  userName: 1,
   userId: null,
   socket: null,
   // 让浏览器滚动条保持在最低部

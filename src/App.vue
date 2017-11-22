@@ -1,17 +1,17 @@
 <template>
-  <div class="chat">
-    <chat-body></chat-body>
+  <div class="chatall">
+    <chat-component></chat-component>
   </div>
   <!-- <group-info></group-info> -->
 </template>
 
 <script>
 
-import ChatBody from './components/ChatBody'
+import ChatComponent from './components/ChatComponent'
 
 export default {
   components: {
-    ChatBody
+    ChatComponent
   }
 }
 </script>
@@ -28,7 +28,7 @@ html {
 body {
   height: 100%;
 }
-.chat{
+.chatall{
   display: flex;
   flex-direction: column;
   height: 100%;

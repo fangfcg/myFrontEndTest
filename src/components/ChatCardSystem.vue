@@ -6,13 +6,16 @@
 	</div>
 </template>
 <script type="text/javascript">
-	export default {
+export default {
   data () {
     return {
     }
   },
-  props: ['msg']
-	}
+  props: ['msg'],
+  mounted () {
+    this.$el.scrollIntoView()
+  }
+}
 </script>
 <style lang='less'>
 	.sys-wrap{
